@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -34,7 +35,62 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Course extends Model
 {
+
+
+    protected $fillable = [
+        "user_id", "title", "description",
+        "picture", "price", "featured", "status"
+    ];
+
     const PUBLISHED = 1;
     const PENDING = 2;
     const REJECTED = 3;
+
+
+
+    public function imagePath() {
+        return sprintf('%s/%s', '/storage/courses', $this->picture);
+    }
+
+    public function categories () {
+        return $this->belongsToMany(Category::class);
+    }
+
+    public function students() {
+        return $this->belongsToMany(User::class, "course_student");
+    }
+
+    public function teacher() {
+        return $this->belongsTo(User::class, "user_id");
+    }
+
+    public function scopeFiltered(Builder $builder) {
+        $builder->with("teacher");
+        $builder->withCount("students");
+        $builder->where("status", Course::PUBLISHED);
+        if (session()->has('search[courses]')) {
+            $builder->where('title', 'LIKE', '%' . session('search[courses]') . '%');
+        }
+        return $builder->paginate();
+    }
+    public function scopeForTeacher(Builder $builder) {
+        return $builder
+            ->withCount('students')
+            ->where("user_id", auth()->id())
+            ->paginate();
+    }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+

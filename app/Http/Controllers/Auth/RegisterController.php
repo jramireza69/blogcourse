@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
@@ -77,5 +78,12 @@ class RegisterController extends Controller
             'role' => $data['role']
         ]);
 
+    }
+    public function registered(Request $request, $user)
+    {
+        if ($request->ajax()){
+            return response()->json(["message" => __("Gracias por crear tu cuenta como profesor en :app", ["app" => env('APP_NAME')])]);
+        }
+        return redirect("/");
     }
 }

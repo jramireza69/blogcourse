@@ -22,9 +22,9 @@ class CreateCoursesTable extends Migration
             $table->string('picture');
             $table->text('description');
             $table->float('price');
-            $table->boolean('feactured')->default(false);
-            $table->enum('status',[
-                Course::PUBLISHED,Course::PENDING,Course::REJECTED
+            $table->boolean('featured')->default(false);
+            $table->enum('status', [
+                Course::PUBLISHED, Course::PENDING, Course::REJECTED
             ])->default(Course::PENDING);
             $table->timestamps();
         });

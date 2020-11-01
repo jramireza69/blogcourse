@@ -8,11 +8,11 @@ use Illuminate\Http\Request;
 class CourseController extends Controller
 {
     public function index() {
-        $courses = Course::all();
-        $session = session('search[courses]');
+       // $courses = Course::all();
+        //$session = session('search[courses]');
        // dd(session('search[courses]'));
-       // $courses = Course::filtered();
-        //return view('learning.courses.index', compact('courses'));
+        $courses = Course::filtered();
+        return view('learning.courses.index', compact('courses'));
     }
 
     public function search() {
