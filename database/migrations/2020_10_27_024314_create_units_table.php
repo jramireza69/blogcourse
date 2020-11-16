@@ -20,12 +20,13 @@ class CreateUnitsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('course_id');
             $table->foreign('course_id')->references('id')->on('courses');
-            $table->enum('unit_type', [Unit::ZIP,Unit::VIDEO, Unit::SECTION])->default(Unit::VIDEO);
+            $table->tinyInteger('order');
+            $table->enum('unit_type', [Unit::ZIP, Unit::VIDEO, Unit::SECTION])->default(Unit::VIDEO);
             $table->string('title');
             $table->text('content')->nullable();
             $table->string('file')->nullable();
-            $table->string('free')->default(false);
-            $table->unsignedTinyInteger('unit_time')->nullable()->comment('total minutes is apply');
+            $table->boolean('free')->default(false);
+            $table->unsignedTinyInteger('unit_time')->nullable()->comment('Total minutes if apply');
             $table->timestamps();
         });
     }

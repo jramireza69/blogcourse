@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Helpers\Currency;
 use App\Models\Course;
-use Illuminate\Http\Request;
+use App\Models\Review;
 
 class CourseController extends Controller
 {
@@ -60,5 +62,10 @@ class CourseController extends Controller
 
         return redirect(route("courses.learn", ["course" => $course]))
             ->with("message", ["success", __("Muchas gracias por valorar el curso")]);
+    }
+
+    public function byCategory(Category $category) {
+        $courses = Course::filtered($category);
+        return view('learning.courses.by_category', compact('courses', 'category'));
     }
 }

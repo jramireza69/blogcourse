@@ -34,12 +34,37 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Unit whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Unit whereUserId($value)
  * @mixin \Eloquent
+ * @property int $order
+ * @property-read \App\Models\Course $course
+ * @method static Builder|Unit forTeacher()
+ * @method static Builder|Unit whereOrder($value)
  */
 class Unit extends Model
 {
+    protected $fillable = [
+        "title", "content", "course_id", "user_id",
+        "unit_type", "unit_time", "file", "order", "free"
+    ];
     const ZIP = 'ZIP';
     const VIDEO = 'VIDEO';
     const SECTION = 'SECTION';
+
+    protected static function boot() //acceso a eventos modelos de elocuent
+    {
+        parent::boot();
+
+        self::saving(function ($table) {
+            $table->user_id = auth()->id();
+        });
+
+        self::creating(function ($table) {
+            $last = Unit::whereCourseId(request("course_id"))
+                ->orderBy('order', 'desc')
+                ->take(1)
+                ->first();
+            $table->order = $last ? $last->order += 1 : 1;
+        });
+    }
 
     public function course() {
         return $this->belongsTo(Course::class);

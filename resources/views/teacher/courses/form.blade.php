@@ -56,60 +56,87 @@
         </a>
     </div>
     <div class="container">
-    @include('partials.form_errors')
-        {{ Form::model($unit, $options) }}
+        @include('partials.form_errors')
+
+        @if($course->picture)
+            <div class="row">
+                <div class="col-3 offset-9">
+                    <img alt="{{ $title }}" class="img-fluid" width="250" src="{{ $course->imagePath() }}" />
+                </div>
+            </div>
+        @endif
+
+        {!! Form::model($course, $options) !!}
         @isset($update)
             @method("PUT")
         @endisset
+
+        <input type="hidden" name="orderedUnits" />
 
         <div class="form-group">
             {!! Form::label('title', __("Título")) !!}
             {!! Form::text('title', null, ['class' => 'form-control']) !!}
         </div>
+
         <div class="form-group">
-            {!! Form::label('course_id', __("Selecciona el curso")) !!}
-            {!! Form::select('course_id', $courses->pluck("title", "id"), null, ["class" => "form-control"]) !!}
-        </div>
-        <div class="form-group">
-            {!! Form::label('free', __("¿Unidad gratuita?")) !!}
-            {!! Form::select('free', [
-                    0 => __("No"),
-                    1 => __("Sí"),
-                ], null, ["class" => "form-control"])
-            !!}
+            {!! Form::label('price', __("Escoge un precio para tu curso")) !!}
+            {!! Form::select('price', \App\Models\Course::prices, null, ["class" => "form-control"]) !!}
         </div>
 
         <div class="form-group">
-            {!! Form::label('unit_type', __("Tipo de unidad")) !!}
-            {!! Form::select('unit_type', [
-                    \App\Models\Unit::VIDEO => __("Vídeo"),
-                    \App\Models\Unit::ZIP => __("Archivo comprimido"),
-                    \App\Models\Unit::SECTION => __("Sección")
-                ], null, ["class" => "form-control"])
-            !!}
+            {!! Form::label('categories[]', __("Selecciona las categorías")) !!}
+            {!! Form::select('categories[]', \App\Models\Category::pluck("name", "id"), null, ["class" => "form-control", "multiple" => true]) !!}
         </div>
+
         <div class="form-group">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <h2 class="text-muted text-center mb-2">
+                {{ __("Organiza las unidades de tu curso") }}
+            </h2>
+            <ul class="drag-list">
+                @forelse($course->units as $unit)
+                    <li data-id="{{ $unit->id }}">
+                            <span class="title">
+                                {{ $unit->title }}
+                                @if($unit->free)
+                                    <span class="badge badge-success float-right">
+                                        {{ __("Gratis") }}
+                                    </span>
+                                @endif
+                            </span>
+                        <span class="drag-area {{ $unit->unit_type }}">
+                                @switch($unit->unit_type)
+                                @case(\App\Models\Unit::VIDEO)
+                                <i class="fa fa-file-video-o text-white"></i>
+                                @break
+                                @case(\App\Models\Unit::SECTION)
+                                <i class="fa fa-list-alt text-white"></i>
+                                @break
+                                @case(\App\Models\Unit::ZIP)
+                                <i class="fa fa-file-zip-o text-white"></i>
+                                @break
+                            @endswitch
+                            </span>
+                    </li>
+                @empty
+                    <div class="empty-results">
+                        {!! __("No tienes ninguna unidad todavía: :link", ["link" => "<a href='".route('teacher.units.create')."'>Añade nuevas unidades para tu curso</a>"]) !!}
                     </div>
-                </div>
-                {!! Form::number('unit_time', null, ['class' => 'form-control', 'placeholder' => __("Duración de la unidad si es vídeo")]) !!}
-            </div>
+                @endforelse
+            </ul>
         </div>
+
         <div class="form-group">
-            {!! Form::label('content', __("Añade el contenido, por ejemplo, el iframe de Vimeo")) !!}
-            {!! Form::textarea('content', old('content') ?? $unit->content, ['id' => 'summernote']) !!}
+            {!! Form::label('description', __("Añade el contenido del curso")) !!}
+            {!! Form::textarea('description', old('description') ?? $course->description, ['id' => 'summernote']) !!}
         </div>
+
         <div class="custom-file">
-            {!! Form::file('file', ['class' => 'custom-file-input', 'id' => 'file']) !!}
-            {!! Form::label('file', __("Escoge un archivo"), ['class' => 'custom-file-label']) !!}
+            {!! Form::file('picture', ['class' => 'custom-file-input', 'id' => 'picture']) !!}
+            {!! Form::label('picture', __("Selecciona la imagen de tu curso"), ['class' => 'custom-file-label']) !!}
         </div>
+
         {!! Form::submit($textButton, ['class' => 'site-btn mt-2 float-right']); !!}
-
-        {{ Form::close() }}
-
+        {!! Form::close() !!}
 
     </div>
 </section>
@@ -123,8 +150,21 @@
                 height: 300,
             });
 
-
+            $('li').arrangeable({dragSelector: '.drag-area'});
+            $('.drag-list').on('drag.end.arrangeable', function () {
+                let orderedUnits = [];
+                const listItems = $(".drag-list li");
+                let order = 1;
+                for (let li of listItems) {
+                    const id = $(li).data("id");
+                    orderedUnits.push({
+                        id,
+                        order
+                    });
+                    order++;
+                }
+                $("input[name=orderedUnits]").val(JSON.stringify(orderedUnits));
+            });
         });
     </script>
 @endpush
-

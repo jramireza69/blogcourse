@@ -14,41 +14,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37e3dd5e-f387-41f5-a216-9cbc8dde38be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Traits/Teacher/ManageCourses.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Traits/Teacher/ManageUnits.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/teacher.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/partials/teacher/hero.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/partials/teacher/navigation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teacher/courses/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teacher/courses/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teacher/courses/list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teacher/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teacher/units/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teacher/units/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teacher/units/list.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Helpers/Currency.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Helpers/Uploader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/Cart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Traits/ManageCart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Traits/Teacher/ManageCoupons.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/functions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/learning/cart.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/learning/courses/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/learning/cart_content.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/learning/courses/coupon_form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/learning/courses/hero_single_course.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/learning/courses/purchase_button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/learning/courses/rating.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/learning/courses/reviews_list.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/learning/courses/sidebar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/learning/courses/single.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/learning/hero_cart.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teacher/coupons/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teacher/courses/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teacher/courses/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teacher/units/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teacher/units/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/blogcourseslv7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blogcourseslv7.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeacherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeacherController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Coupon.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Coupon.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Review.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Unit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Unit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/Teacher/ManageCourses.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/Teacher/ManageCourses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/Teacher/ManageUnits.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/Teacher/ManageUnits.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_27_023840_create_courses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_27_023840_create_courses_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/learning/featured_courses.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/learning/featured_courses.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_27_024054_create_course_student_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_27_024054_create_course_student_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_27_024158_create_category_course_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_27_024158_create_category_course_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_27_024222_create_coupon_course_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_27_024222_create_coupon_course_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_27_024314_create_units_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_27_024314_create_units_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/es/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/es/validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/teacher.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/teacher.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partials/learning/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/learning/navigation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/learning/signup_teacher.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/learning/signup_teacher.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/teacher/courses/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teacher/courses/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/teacher/units/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teacher/units/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +78,13 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -187,6 +214,15 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
       <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
       <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
+      <path value="$PROJECT_DIR$/vendor/moneyphp/money" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/laravel/cashier" />
+      <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jRPj6Ij1rtoqX7v04iJ8PHpoiZ" />
@@ -195,14 +231,14 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="sortByType" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Constants" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/teacher/units" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/partials/learning/courses" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -215,16 +251,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\blogcourseslv7\resources\views\partials\learning\courses" />
+      <recent name="C:\laragon\www\blogcourseslv7\resources\views\learning\courses" />
       <recent name="C:\laragon\www\blogcourseslv7\resources\views\teacher\units" />
       <recent name="C:\laragon\www\blogcourseslv7\resources\views\teacher\courses" />
       <recent name="C:\laragon\www\blogcourseslv7\app\Models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\blogcourseslv7\resources\views\partials\learning\courses" />
+      <recent name="C:\laragon\www\blogcourseslv7\resources\views\teacher\courses" />
       <recent name="C:\laragon\www\blogcourseslv7\resources\views\teacher\units" />
       <recent name="C:\laragon\www\blogcourseslv7\app\Traits\Teacher" />
-      <recent name="C:\laragon\www\blogcourseslv7\resources\views\teacher\courses" />
       <recent name="C:\laragon\www\blogcourseslv7\resources\lang" />
-      <recent name="C:\laragon\www\blogcourseslv7\public" />
     </key>
   </component>
   <component name="RunManager" selected="Laravel.servidor integrado">
@@ -266,7 +304,12 @@
       <workItem from="1604107679781" duration="44000" />
       <workItem from="1604179688124" duration="9625000" />
       <workItem from="1604235938118" duration="2699000" />
-      <workItem from="1604249755935" duration="11027000" />
+      <workItem from="1604249755935" duration="16607000" />
+      <workItem from="1604326615765" duration="8814000" />
+      <workItem from="1604356596460" duration="3466000" />
+      <workItem from="1604755267477" duration="6301000" />
+      <workItem from="1604785018597" duration="24933000" />
+      <workItem from="1604923923260" duration="3629000" />
     </task>
     <servers />
   </component>
@@ -313,58 +356,62 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1604181501363" />
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1604191172640">
+    <state width="1323" height="270" key="GridCell.Tab.0.bottom" timestamp="1604891253956">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604191172640" />
-    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1604191172640">
+    <state width="1323" height="270" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604891253956" />
+    <state width="1323" height="270" key="GridCell.Tab.0.center" timestamp="1604891253956">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1604191172640" />
-    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1604191172640">
+    <state width="1323" height="270" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1604891253956" />
+    <state width="1323" height="270" key="GridCell.Tab.0.left" timestamp="1604891253956">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1604191172640" />
-    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1604191172640">
+    <state width="1323" height="270" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1604891253956" />
+    <state width="1323" height="270" key="GridCell.Tab.0.right" timestamp="1604891253956">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1604191172640" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1604191172640">
+    <state width="1323" height="270" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1604891253956" />
+    <state width="1323" height="270" key="GridCell.Tab.1.bottom" timestamp="1604891253956">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604191172640" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1604191172640">
+    <state width="1323" height="270" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604891253956" />
+    <state width="1323" height="270" key="GridCell.Tab.1.center" timestamp="1604891253956">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1604191172640" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1604191172640">
+    <state width="1323" height="270" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1604891253956" />
+    <state width="1323" height="270" key="GridCell.Tab.1.left" timestamp="1604891253956">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1604191172640" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1604191172640">
+    <state width="1323" height="270" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1604891253956" />
+    <state width="1323" height="270" key="GridCell.Tab.1.right" timestamp="1604891253956">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1604191172640" />
-    <state width="1323" height="223" key="GridCell.Tab.2.bottom" timestamp="1604191172640">
+    <state width="1323" height="270" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1604891253956" />
+    <state width="1323" height="270" key="GridCell.Tab.2.bottom" timestamp="1604891253956">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604191172640" />
-    <state width="1323" height="223" key="GridCell.Tab.2.center" timestamp="1604191172640">
+    <state width="1323" height="270" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604891253956" />
+    <state width="1323" height="270" key="GridCell.Tab.2.center" timestamp="1604891253956">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1604191172640" />
-    <state width="1323" height="223" key="GridCell.Tab.2.left" timestamp="1604191172640">
+    <state width="1323" height="270" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1604891253956" />
+    <state width="1323" height="270" key="GridCell.Tab.2.left" timestamp="1604891253956">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1604191172640" />
-    <state width="1323" height="223" key="GridCell.Tab.2.right" timestamp="1604191172640">
+    <state width="1323" height="270" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1604891253956" />
+    <state width="1323" height="270" key="GridCell.Tab.2.right" timestamp="1604891253956">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1604191172640" />
-    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1604270484724">
+    <state width="1323" height="270" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1604891253956" />
+    <state x="444" y="86" key="NewPhpClassDialog" timestamp="1604925481415">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1604270484724" />
+    <state x="444" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1604925481415" />
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1604852950956">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1604852950956" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1604238233791">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -377,13 +424,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="500" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1604255285727" />
-    <state x="635" y="131" width="680" height="529" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1604190621992">
+    <state x="635" y="131" width="680" height="529" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1604880795486">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="635" y="131" width="680" height="529" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1604190621992" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1604273951800">
+    <state x="635" y="131" width="680" height="529" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1604880795486" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1604926371975">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1604273951800" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1604926371975" />
   </component>
 </project>

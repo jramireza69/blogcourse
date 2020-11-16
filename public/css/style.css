@@ -5,7 +5,10 @@
  ------------------------------------
  ====================================*/
 
+
 /*----------------------------------------*/
+
+
 /* Template default CSS
 /*----------------------------------------*/
 
@@ -102,6 +105,7 @@ ol {
     margin: 0;
 }
 
+
 /*---------------------
   Helper CSS
 -----------------------*/
@@ -155,9 +159,11 @@ ol {
     color: #e0e3e4;
 }
 
+
 /*---------------------
   Commom elements
 -----------------------*/
+
 
 /* buttons */
 
@@ -187,6 +193,7 @@ ol {
     background: #e4edef;
     color: #1f1f1f;
 }
+
 
 /* Preloder */
 
@@ -252,6 +259,7 @@ ol {
     }
 }
 
+
 /*------------------
   Header section
 ---------------------*/
@@ -298,9 +306,11 @@ ol {
     display: none;
 }
 
+
 /*------------------
   Form errors
 ---------------------*/
+
 .form-errors {
     background-color: #d82a4e;
     padding-left: 10px;
@@ -346,6 +356,7 @@ ol {
 .intro-newslatter .site-btn {
     min-width: 214px;
 }
+
 
 /*------------------
   Categories section
@@ -394,6 +405,7 @@ ol {
 .categorie-item:hover .ci-text span {
     color: #fff;
 }
+
 
 /*------------------
   Search section
@@ -474,6 +486,7 @@ ol {
 .search-section.ss-other-page .course-search-form input[type=email]:focus {
     border-bottom: none;
 }
+
 
 /*------------------
   Course section
@@ -628,6 +641,7 @@ ol {
     border-bottom: 4px solid #d82a4e;
 }
 
+
 /*------------------
   Signup section
 ---------------------*/
@@ -723,6 +737,7 @@ ol {
 .featured-courses {
     padding-top: 67px;
 }
+
 
 /*------------------
   Footer section
@@ -864,6 +879,7 @@ ol {
     color: #474747;
 }
 
+
 /*------------------
     Other Pages
 ---------------------
@@ -902,6 +918,7 @@ ol {
 .site-breadcrumb span {
     color: #d82a4e;
 }
+
 
 /*------------------
   Single course
@@ -1042,6 +1059,7 @@ ol {
     padding-top: 10px;
     background: #d82a4e;
 }
+
 
 /*------------------
   Blog Page
@@ -1203,6 +1221,7 @@ ol {
     color: #d82a4e;
 }
 
+
 /*------------------
   Contact Page
 ---------------------*/
@@ -1309,6 +1328,7 @@ ol {
     background: #ddd;
 }
 
+
 /*------------------
   Elements Page
 ---------------------*/
@@ -1322,6 +1342,7 @@ ol {
     color: #474747;
     margin-bottom: 110px;
 }
+
 
 /* Accordion */
 
@@ -1386,6 +1407,7 @@ ol {
     padding: 0 5px;
 }
 
+
 /* tab */
 
 .tab-element .nav-tabs {
@@ -1421,6 +1443,7 @@ ol {
 .tab-element .tab-pane p {
     padding-top: 35px;
 }
+
 
 /* Circle progress */
 
@@ -1469,6 +1492,7 @@ ol {
     margin-right: 15px;
 }
 
+
 /*------------------
   Responsive
 ---------------------*/
@@ -1486,6 +1510,7 @@ ol {
         left: 0;
     }
 }
+
 
 /* Medium screen : 992px. */
 
@@ -1525,6 +1550,7 @@ ol {
         padding: 5px 20px;
     }
 }
+
 
 /* Tablet :768px. */
 
@@ -1595,6 +1621,7 @@ ol {
         border-right: none;
     }
 }
+
 
 /* Large Mobile :480px. */
 
@@ -1701,6 +1728,7 @@ ol {
     }
 }
 
+
 /* Medium Mobile :480px. */
 
 @media only screen and (max-width: 576px) {
@@ -1738,6 +1766,7 @@ ol {
         margin-bottom: 20px;
     }
 }
+
 
 /* Small Mobile :320px. */
 
@@ -1923,4 +1952,11 @@ ol {
     font-size: 60px;
     font-weight: 500;
     margin-bottom: 20px;
+}
+
+.wish-heart {
+    position: absolute;
+    top: 230px;
+    right: 25px;
+    cursor: pointer;
 }

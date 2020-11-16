@@ -32,12 +32,17 @@
                 <nav class="main-menu">
                     <ul>
                         <li><a href="{{ route('welcome') }}">{{ __("Inicio") }}</a></li>
-                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="{{ route("courses.index") }}">{{__("Cursos")}}</a></li>
                         <li><a href="blog.html">News</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         @teacher
                         <li><a class="brand-text" href="{{route('teacher.index')}}">{{__("Profesor")}}</a></li>
                         @endteacher
+                        @auth
+                            <li>
+                                <a class="brand-text" href="{{ route('student.index') }}">{{ __("Estudiante") }}</a>
+                            </li>
+                        @endauth
                     </ul>
                 </nav>
             </div>

@@ -38,7 +38,7 @@
 
 @include('partials.teacher.navigation')
 
-{{-- @component('components.alert-component')@endcomponent --}}
+ @component('components.alert-component')@endcomponent
 
 @yield('content')
 
