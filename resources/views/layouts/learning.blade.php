@@ -39,7 +39,9 @@
 
 @yield('hero')
 
-@yield('content')
+<div id="app">
+    @yield('content')
+</div>
 
 @include('partials.learning.footer')
 
